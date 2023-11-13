@@ -1,0 +1,22 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "Projeto Final de Programação Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamPedrin/web-project.git"
+  },
+  "author": "Pedro Luiz, Breno Yukihiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamPedrin/web-project/issues"
+  },
+  "homepage": "https://github.com/IamPedrin/web-project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
