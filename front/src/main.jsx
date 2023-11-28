@@ -7,7 +7,8 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 //Importando Rotas
 import Login from "./login/Login.jsx";
-//import CreateUser from "/login/CreateUser.jsx";
+import CreateUser from "./login/CreateUser.jsx";
+import Home from "./home/Home.jsx";
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -19,11 +20,15 @@ const router = createBrowserRouter([
         path: '/',
         element: <Login />
       },
-      // {
-      //   path: "/criar-user",
-      //   element: <CreateUser />
-      // }
+      {
+        path: "/criar-user",
+        element: <CreateUser />
+      }
     ]
+  },
+  {
+    path: "/home",
+    element: <Home />,
   }
 ]);
 
