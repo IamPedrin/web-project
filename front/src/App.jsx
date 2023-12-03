@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 
 function App() {
@@ -6,9 +6,9 @@ function App() {
   return (
     <>
 
-      <section className="login-user">
+      <section className="pag-inicial">
         <header>
-          <h1>Bem vindo ao site foda de series</h1>
+          <h1>Bem vindo ao site de series do momento</h1>
         </header>
         <Outlet />
       </section>

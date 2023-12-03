@@ -1,13 +1,12 @@
+require("dotenv").config();
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-require("dotenv").config();
-
 const app = express();
-app.use(cors());
+app.use(cors());  
 
 const User = require('./model/User');
 
@@ -32,6 +31,7 @@ app.post("/login", async (req, res) => {
         const passwordValidado = await bcrypt.compare(password, user.password);
         if(passwordValidado){
           const token = jwt.sign(user, process.env.TOKEN);
+          console.log(token);
           return res.json({"token": token});
         }else{
           return res.status(422).send("Senha inválida");
@@ -41,12 +41,11 @@ app.post("/login", async (req, res) => {
     return res.status(409).send(`Usuário ${username} não encontrado. Considere criar uma conta`);
 });
 
-app.post("/criar", async (req, res) => {
+app.post("/criar-user", async (req, res) => {
   //Extrair dados do forms
   const { username, email, password } = req.body;
 
   const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
-  console.log(jsonPath);
   const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
 
   //Verificar se o usuário já existe
@@ -77,24 +76,42 @@ app.post("/criar", async (req, res) => {
 });
 
 app.get("/home", verificaToken, (req, res) => {
-  const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
-  const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
 
-  return res.json(usuariosCadastrados);
+  const { titulo, ano, genero, sinopse, imagem } = req.body;
+
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
+
+  //Verificar se a série já existe
+  for(let serie of seriesCadastradas){
+    if(serie.titulo === titulo){
+      return res.status(409).send("Série já cadastrada");
+    }
+  }
+
+  //Gerar um id para a série
+  const id = seriesCadastradas.length + 1;
+
+  //Criacao do objeto série
+  const serie = new Serie(id, titulo, ano, genero, sinopse, imagem);
+
+  //Adicionar a série no BD
+  seriesCadastradas.push(serie);
+  fs.writeFileSync(jsonPath, JSON.stringify(seriesCadastradas, null, 2));
+  res.send("Série cadastrada com sucesso");
 });
 
 
-function verificaToken(req, res, next){
+
+
+function verificaToken(req, res, next) {
   const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1]
 
-  const token = authHeader && authHeader.split(" ")[1];
-  //bearer token
+  if (token == null) return res.status(401).send("Acesso Negado");
 
-  if(token == null) return res.status(401).send("Acesso Negado/Expirado");
-
-  jwt.verify(token, process.env.TOKEN, (err, user) => {
-    if(err) return res.status(403).send("Token inválido");
-    req.user = user;
+  jwt.verify(token, process.env.TOKEN, (err) => {
+    if (err) return res.status(403).send("Token inválido/Expirado");
     next();
   });
 }

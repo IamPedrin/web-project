@@ -9,6 +9,9 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Login from "./login/Login.jsx";
 import CreateUser from "./login/CreateUser.jsx";
 import Home from "./home/Home.jsx";
+import Navbar from './components/Navbar.jsx'
+import Perfil from './perfil/Perfil.jsx'
+import MinhaLista from './minha-lista/MinhaLista.jsx'
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -28,7 +31,33 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <Navbar />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />
+      },
+    ]
+  },
+  {
+    path: "/perfil",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/perfil",
+        element: <Perfil />
+      }
+    ]
+  },
+  {
+    path: "/minha-lista",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/minha-lista",
+        element: <MinhaLista />
+      }
+    ]
   }
 ]);
 
