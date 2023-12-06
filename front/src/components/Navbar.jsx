@@ -1,11 +1,46 @@
 import { Outlet, Link } from "react-router-dom";
+import { useState, useEffect} from "react";
+import axios from "axios";
 
-function Navbar(){
+export default function Navbar(){
+
+    const [validado, setValidado] = useState(false);
+
+    const config = {
+        headers: {
+            "Authorization": "Bearer ".concat(sessionStorage.getItem('token'))
+        }
+    }
+
+    const handleError = (error) => {
+        if (error.response && error.response.status === 401) {
+           setValidado(false);
+        }
+    };
+
+    useEffect(() => {
+        async function valida() {
+            try {
+                const response = await axios.get("http://localhost:3000/home", config);
+                console.log(response);
+                if(response.status === 200)
+                    setValidado(true);
+            } catch (error) {
+                handleError(error);
+            }
+        }
+        valida();
+    }, []);
+
+    // if(!validado){
+    //     return <p>Token Inválido</p>
+    // }
+
     return(
         <>
             <nav className="nav">
                 <ul>
-                    <li><Link to="/home">Página Inicial</Link></li>
+                    <li><Link to="/home">Pesquisar</Link></li>
                     <li><Link to="/lista">Minha Lista</Link></li>
                     <li><Link to="/perfil">Perfil</Link></li>
                 </ul>
@@ -15,4 +50,4 @@ function Navbar(){
     )
 }
 
-export default Navbar
+//export default Navbar;

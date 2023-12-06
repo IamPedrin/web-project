@@ -12,6 +12,7 @@ import Home from "./home/Home.jsx";
 import Navbar from './components/Navbar.jsx';
 import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
+import ShowSearch from './components/ShowSearch.jsx'
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/home",
-        element: <Home />
+        element: <ShowSearch />
       }
     ]
   },
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/perfil",
+        element: <Perfil />
+      },
+      {
+        path: "/perfil/:username",
         element: <Perfil />
       }
     ]

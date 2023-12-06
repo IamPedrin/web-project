@@ -3,6 +3,7 @@
     "id": 1,
     "username": "pedrin",
     "email": "pedrin@gmail.com",
-    "password": "$2b$10$BRHTvcsoZOp8kkO2KIgRxO3MAv7wnRfDmcZ4CaD98wrwl57fRAQvS"
+    "password": "$2b$10$YEtCegghQTqqNq8mOo7lIu7T4x7/AQcLK84XeR9TxSr1gR29SZmAG",
+    "lista": []
   }
 ]

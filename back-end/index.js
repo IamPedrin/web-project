@@ -10,6 +10,7 @@ const app = express();
 app.use(cors());
 
 const User = require('./model/User');
+const Serie = require('./model/Serie');
 
 app.use(express.json());
 
@@ -31,8 +32,8 @@ app.post("/login", async (req, res) => {
       if(user.username === username){
         const passwordValidado = await bcrypt.compare(password, user.password);
         if(passwordValidado){
-          const token = jwt.sign(user, process.env.TOKEN);
-          return res.json({"token": token});
+          const token = jwt.sign({ id: user.id, username: user.username }, process.env.TOKEN);
+          return res.status(200).json({"token" : token});
         }else{
           return res.status(422).send("Senha inválida");
         }  
@@ -67,7 +68,7 @@ app.post("/criar", async (req, res) => {
   const passwordCrypt = await bcrypt.hash(password, salt);
 
   //Criacao do objeto usuário
-  const user = new User(id, username, email, passwordCrypt);
+  const user = new User(id, username, email, passwordCrypt, []);
 
   //Adicionar o usuário no BD
   usuariosCadastrados.push(user);
@@ -76,25 +77,56 @@ app.post("/criar", async (req, res) => {
 
 });
 
-app.get("/home", verificaToken, (req, res) => {
-  const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
-  const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
+app.post("/cadastrar-review", (req, res) => {
+  const { nota, review } = req.query;
 
-  return res.json(usuariosCadastrados);
+  const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
+  const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+
+  // Encontrar o usuário pelo ID
+  const usuario = usuariosCadastrados.find((user) => user.id === userId);
+
+  if (!usuario) {
+    return res.status(404).send("Usuário não encontrado");
+  }
+
+  // Adicionar o item à lista do usuário
+  usuario.lista.push(nota, review);
+
+  // Salvar as alterações no arquivo JSON
+  fs.writeFileSync(jsonPath, JSON.stringify(usuariosCadastrados, null, 2));
+
+  res.send("Item adicionado com sucesso à lista do usuário");
+});
+
+
+app.post("/home", verificaToken, (req, res) => {
+
 });
 
 
 function verificaToken(req, res, next){
-  const authHeader = req.headers["authorization"];
+//   try{
+//     const token = req.header("Authorization").repplace("Bearer ", "");
+
+//     const decoded = jwt.verify(token, process.env.TOKEN);
+
+//     req.userId = decoded.userId;
+//     req.username = decoded.username;
+//     next();
+//   }catch(err){
+//     return res.status(401).send({error:"Token inválido"});
+//   }
+  
+    const authHeader = req.headers["authorization"];
 
   const token = authHeader && authHeader.split(" ")[1];
   //bearer token
 
-  if(token == null) return res.status(401).send("Acesso Negado/Expirado");
+  if(token == null) return res.status(401).send("Acesso Negado");
 
-  jwt.verify(token, process.env.TOKEN, (err, user) => {
-    if(err) return res.status(403).send("Token inválido");
-    req.user = user;
+  jwt.verify(token, process.env.TOKEN, (err) => {
+    if(err) return res.status(403).send("Token Inválido/Expirado");
     next();
   });
 }
