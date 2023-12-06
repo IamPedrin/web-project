@@ -8,7 +8,6 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 //Importando Rotas
 import Login from "./login/Login.jsx";
 import CreateUser from "./login/CreateUser.jsx";
-import Home from "./home/Home.jsx";
 import Navbar from './components/Navbar.jsx';
 import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
