@@ -41,6 +41,7 @@ app.post("/login", async (req, res) => {
     return res.status(409).send(`Usuário ${username} não encontrado. Considere criar uma conta`);
 });
 
+
 app.post("/criar", async (req, res) => {
   //Extrair dados do forms
   const { username, email, password } = req.body;
@@ -98,3 +99,12 @@ function verificaToken(req, res, next){
     next();
   });
 }
+
+app.get("/perfil", verificaToken, (req, res)=>{
+
+  //Abre o bd com os usuários e retorna o nome do usuário logado atualmente 
+  const jsonPath = path.join(__dirname,'.','db','db-users.json');
+  const username = JSON.parse(fs.readFileSync(jsonPath, {encoding: 'utf8', flag: 'r'}));
+
+  return res.json(username);
+});

@@ -12,6 +12,7 @@ import Home from "./home/Home.jsx";
 import Navbar from './components/Navbar.jsx';
 import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
+import ChangeP from "./change/ChangeP.jsx";
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -58,6 +59,17 @@ const router = createBrowserRouter([
         element: <MinhaLista />
       }
     ]
+  },
+  {
+    path: '/mudar-senha',
+    element:<Navbar/>,
+    children:[
+      {
+        path: '/mudar-senha',
+        element:<ChangeP />
+      }
+    ]
+    
   }
 ]);
 

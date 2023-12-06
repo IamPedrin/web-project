@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import '../styles/Nav.css'
 
 
-function Navbar(){
+function ChangeE(){
     return(
         <>
             <nav className="nav">

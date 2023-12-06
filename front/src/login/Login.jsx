@@ -6,6 +6,8 @@ import {Link, Navigate} from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+import '../styles/Login.css'
+
 export default function Login(){
 
     const schema = yup.object({
@@ -45,26 +47,30 @@ export default function Login(){
     }
 
     return(
-        <>
-            <h2>LOGIN</h2>
-            <form onSubmit={handleSubmit(submit)} noValidate>
+        <>  
+            <div className="borderBox">
+                <h2>LOGIN</h2>
+                    <form onSubmit={handleSubmit(submit)} noValidate>
 
-                <label htmlFor="username" placeholder="Usuário">Usuário</label>
-                <input type="text" id="username" {...register("username")} />
-                <p className="erro">{errors.email?.message}</p>
+                        <label htmlFor="username" placeholder="Usuário">Usuário</label>
+                        <input type="text" id="username" {...register("username")} />
+                        <p className="erro">{errors.email?.message}</p>
 
-                <label htmlFor="password" placeholder="Senha">Senha</label>
-                <input type="password" id="password" {...register("password")}/>
-                <p className="erro">{errors.password?.message}</p>
+                        <label htmlFor="password" placeholder="Senha">Senha</label>
+                        <input type="password" id="password" {...register("password")}/>
+                        <p className="erro">{errors.password?.message}</p>
 
-                <button>LOGIN</button>
+                        <button>LOGIN</button>
 
-            </form>
+                    </form>
 
-            <p className="server-response">{msg}</p>
-            <div className="realizar-cadastro">
-                Não possui cadastro? <Link to="/criar-user">Clique aqui</Link>
             </div>
+            
+                    <p className="server-response">{msg}</p>
+                    <div className="realizar-cadastro">
+                        Não possui cadastro? <Link to="/criar-user">Clique aqui</Link>
+                    </div>
+            
         </>
     );
 }

@@ -7,8 +7,8 @@ function App() {
     <>
 
       <section className="login-user">
-        <header>
-          <h1>Bem vindo ao site foda de series</h1>
+        <header className="titulo">
+          <h1>Boxletter</h1>
         </header>
         <Outlet />
       </section>
