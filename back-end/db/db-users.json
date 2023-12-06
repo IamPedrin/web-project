@@ -1,20 +1,9 @@
 [
   {
     "id": 1,
-    "username": "a",
-    "email": "a@gmail.com",
-    "password": "$2b$10$C0aWVloD/wnIqLu1812yx.L5fiO9gRwe1n0vVVF6tQznh3BtrVqlS"
-  },
-  {
-    "id": 2,
-    "username": "breno",
-    "email": "breno.hiroyuki@hotmail.com",
-    "password": "$2b$10$mQX6zMY9vH1l5PLOh3wb7.VgwjawunEryLd9bAE0p8Jp6oKfA0/LW"
-  },
-  {
-    "id": 3,
-    "username": "aaaa",
-    "email": "aaa@aaa.com",
-    "password": "$2b$10$nGS5Y9AA9nr2gnOxrsxpvO3kqMC1INJLAHdFUb/IGeKYmc40thxPy"
+    "username": "pedrin",
+    "email": "pedrin@gmail.com",
+    "password": "$2b$10$YEtCegghQTqqNq8mOo7lIu7T4x7/AQcLK84XeR9TxSr1gR29SZmAG",
+    "lista": []
   }
 ]
