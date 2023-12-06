@@ -1,16 +1,7 @@
-import {set, useForm} from "react-hook-form";
-import axios from "axios";
-import * as yup from "yup";
-import {yupResolver} from "@hookform/resolvers/yup";
-import {useState} from "react";
-import {Link} from "react-router-dom";
-
-import User from "./User";
-import "../styles/Perfil.css"
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "../styles/Perfil.css"
 
 export default function Perfil() {
  const { id } = useParams();

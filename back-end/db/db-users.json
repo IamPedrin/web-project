@@ -5,5 +5,12 @@
     "email": "pedrin@gmail.com",
     "password": "$2b$10$YEtCegghQTqqNq8mOo7lIu7T4x7/AQcLK84XeR9TxSr1gR29SZmAG",
     "lista": []
+  },
+  {
+    "id": 2,
+    "username": "breno",
+    "email": "breno.hiroyuki@hotmail.com",
+    "password": "$2b$10$EYH2njhYQZ2oVwfWQpsmX.Fpn8DW85BJl88rZlydVcqU7y0/wc90u",
+    "lista": []
   }
 ]
