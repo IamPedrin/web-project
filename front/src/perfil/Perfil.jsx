@@ -18,20 +18,80 @@ export default function Perfil() {
  const [senha, setSenha] = useState("");
  const [confirmarSenha, setConfirmarSenha] = useState("");
 
-    return(
-        <>
-            <h2>Meu perfil</h2>
-            <body className="profileExhibit">
-                <h2 className="headerNome">Bem-vindo, (nome)</h2>
-                <div className="buttonBox">
-                    <Link to="/mudar-senha"><button>Trocar de Senha</button></Link>
-                    <Link to="/ChangeE"><button>Trocar de Email</button></Link>
-                    <Link to="/"><button>Deslogar</button></Link>
-                </div>
-            </body>
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-        </>
-    )
+  if (senha !== confirmarSenha) {
+    alert("As senhas não coincidem");
+    return;
+  }
+
+  try {
+    await axios.put(`http://localhost:3000/users/${id}`, {
+      email,
+      senha,
+    });
+
+    alert("Dados atualizados com sucesso");
+  } catch (err) {
+    alert("Erro ao atualizar os dados");
+  }
+};
+
+return (
+  <>
+    <h2>Editar perfil</h2>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Email:
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Senha:
+        <input
+          type="password"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Confirmar senha:
+        <input
+          type="password"
+          value={confirmarSenha}
+          onChange={(e) => setConfirmarSenha(e.target.value)}
+        />
+      </label>
+      <br />
+      <button type="submit">Atualizar</button>
+    </form>
+  </>
+);
+
+
+
+    // return(
+    //     <>
+    //         <h2>Meu perfil</h2>
+    //         <body className="profileExhibit">
+    //             <h2 className="headerNome">Bem-vindo, (nome)</h2>
+    //             <div className="buttonBox">
+    //                 <Link to="/mudar-senha"><button>Trocar de Senha</button></Link>
+    //                 <Link to="/ChangeE"><button>Trocar de Email</button></Link>
+    //                 <Link to="/"><button>Deslogar</button></Link>
+    //             </div>
+    //         </body>
+
+    //     </>
+    // )
+
+
 }
 
 // Perfil.jsx
@@ -66,60 +126,5 @@ export default function Perfil() {
 
 // export default Perfil;
  // Função para alterar o email e senha do perfil atual
- const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    if (senha !== confirmarSenha) {
-      alert("As senhas não coincidem");
-      return;
-    }
-
-    try {
-      await axios.put(`http://localhost:3000/users/${id}`, {
-        email,
-        senha,
-      });
-
-      alert("Dados atualizados com sucesso");
-    } catch (err) {
-      alert("Erro ao atualizar os dados");
-    }
- };
-
- return (
-    <>
-      <h2>Editar perfil</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Senha:
-          <input
-            type="password"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Confirmar senha:
-          <input
-            type="password"
-            value={confirmarSenha}
-            onChange={(e) => setConfirmarSenha(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="submit">Atualizar</button>
-      </form>
-    </>
- );
-}
 
