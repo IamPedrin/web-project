@@ -42,8 +42,9 @@ const ShowDetails = ({ show, onClose }) => {
     <div className='overlay'>
       <form className='modal' onSubmit={handleSubmit(submit)} noValidate>
         <button onClick={onClose}>Fechar</button>
-        <h2 htmlFor="titulo" id="titulo" {...register("titulo")}>{show.name}</h2>
-        <p htmlFor="sinopse" id="sinopse" {...register("sinopse")}>{show.summary}</p>
+        <h2>{show.name}</h2>
+        <p>{show.summary}</p>
+        
         <label htmlFor='nota'>Nota:</label>
         <input type="number" id="nota" {...register("nota")}/>
         <p className="erro">{errors.nota?.message}</p>

@@ -24,6 +24,7 @@ export default function Login(){
     const { register, handleSubmit, formState } = form;
 
     const { errors } = formState;
+    
 
     const submit = async (data) => {
         
@@ -31,7 +32,7 @@ export default function Login(){
         {
             const response = await axios.post("http://localhost:3000/login", data);
             const token = response.data.token;
-            sessionStorage.setItem("token", token);
+            localStorage.setItem("token", token, "username", username);
             if(token)
                 setMsg("Autenticado");
         }

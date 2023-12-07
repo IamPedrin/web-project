@@ -41,6 +41,7 @@ export default function Navbar(){
                     <li><Link to="/home">Pesquisar</Link></li>
                     <li><Link to="/lista">Minha Lista</Link></li>
                     <li><Link to="/perfil">Perfil</Link></li>
+                    <li><Link to="/" >Sair</Link></li>
                 </ul>
             </nav>
             <Outlet/>

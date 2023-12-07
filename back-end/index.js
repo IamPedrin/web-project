@@ -35,9 +35,7 @@ app.post("/login", async (req, res) => {
         if(passwordValidado){
           // const token = jwt.sign({ id: user.id, username: user.username }, process.env.TOKEN);
           const token = jwt.sign(user, process.env.TOKEN);
-
-          return res.status(200).json({"token" : token});
-
+          return res.status(200).json({auth: true ,token: token});
         }else{
           return res.status(422).send("Senha inválida");
         }  
@@ -46,6 +44,10 @@ app.post("/login", async (req, res) => {
     return res.status(409).send(`Usuário ${username} não encontrado. Considere criar uma conta`);
 });
 
+
+app.post("/logout", function(req, res) {
+  res.json({auth: false, token: null});
+})
 
 app.post("/criar", async (req, res) => {
   //Extrair dados do forms
@@ -82,21 +84,21 @@ app.post("/criar", async (req, res) => {
 
 });
 
-app.post("/cadastrar-review", async (req, res) => {
-  const { titulo, sinopse,  nota, review } = req.body;
+app.post("/cadastrar-serie", async (req, res) => {
+  const { titulo, sinopse, imagem, review, nota } = req.body;
 
-  const jsonPath = path.join(__dirname, ".", "db", "db-reviews.json");
-  const reviewsCadastrados = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
 
-  const id = reviewsCadastrados.length + 1;
+  const id = seriesCadastradas.length + 1;
 
-  const reviewObj = new Serie(id, titulo, sinopse, nota, review);
+  const serieObj = new Serie(id, titulo, sinopse, imagem, review, nota);
   // Adicionar o item à lista do usuário
-  reviewsCadastrados.push(reviewObj);
+  seriesCadastradas.push(serieObj);
 
   // Salvar as alterações no arquivo JSON
-  fs.writeFileSync(jsonPath, JSON.stringify(reviewsCadastrados, null, 2));
-  res.send("Review cadastrado com sucesso");
+  fs.writeFileSync(jsonPath, JSON.stringify(seriesCadastradas, null, 2));
+  res.send("Serie cadastrado com sucesso");
 });
 
 
@@ -115,8 +117,10 @@ function verificaToken(req,res,next){
 
   if(token == null) return res.status(401).send('Acesso Negado');
 
-  jwt.verify(token, process.env.TOKEN, (err) => {
+  jwt.verify(token, process.env.TOKEN, (err, decoded) => {
       if(err) return res.status(403).send('Token Inválido/Expirado');
+      
+      req.userId = decoded.id;
       next();
   })
 
