@@ -101,7 +101,7 @@ app.post("/cadastrar-serie", async (req, res) => {
 });
 
 
-app.get("/home", verificaToken, (req, res) => {
+app.get("/home", (req, res) => {
   const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
   const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
   return res.json(usuariosCadastrados);
@@ -116,20 +116,46 @@ function verificaToken(req,res,next){
 
   if(token == null) return res.status(401).send('Acesso Negado');
 
-  jwt.verify(token, process.env.TOKEN, (err, decoded) => {
+  jwt.verify(token, process.env.TOKEN, (err) => {
       if(err) return res.status(403).send('Token Inválido/Expirado');
-      
-      req.userId = decoded.id;
       next();
   })
 
 }
 
-app.get("/perfil", verificaToken, (req, res)=>{
+app.get("/lista", (req, res) => {
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+  return res.json(seriesCadastradas)
+})
 
-  //Abre o bd com os usuários e retorna o nome do usuário logado atualmente 
-  const jsonPath = path.join(__dirname,'.','db','db-users.json');
-  const username = JSON.parse(fs.readFileSync(jsonPath, {encoding: 'utf8', flag: 'r'}));
+app.delete("/lista/:id", (req, res) => {
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
 
-  return res.json(username);
+  const params = req.params.id;
+
+  // Filtrar os elementos que não correspondem ao ID fornecido
+  const seriesFiltradas = seriesCadastradas.filter((serie) => serie.id === params);
+
+  //Deletar do JSON
+  seriesCadastradas.delete(seriesFiltradas);
+  //Salva a alteração
+  fs.writeFileSync(jsonPath, JSON.stringify(seriesCadastradas, null, 2));
+
+  res.send("Série excluída com sucesso");
 });
+
+// app.get("/lista/:titulo", verificaToken, (req, res) => {
+//   const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+//   const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+
+//   const params = req.params;
+
+//   for(let serie of seriesCadastradas){
+//     if(params.titulo.toLowerCase()===disciplina.titulo){
+//       return res.json(serie);
+//     }
+//   }
+//   return res.status(403).send("Série nao encontrada!");
+// })
