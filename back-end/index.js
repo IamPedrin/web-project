@@ -1,18 +1,19 @@
+require("dotenv").config();
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-require("dotenv").config();
+
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const User = require('./model/User');
 const Serie = require('./model/Serie');
 
-app.use(express.json());
 
 app.listen(3000, () => {
   console.log('Servidor na porta 3000');
@@ -81,58 +82,44 @@ app.post("/criar", async (req, res) => {
 
 });
 
-app.post("/cadastrar-review", (req, res) => {
-  const { nota, review } = req.query;
+app.post("/cadastrar-review", async (req, res) => {
+  const { titulo, sinopse,  nota, review } = req.body;
 
-  const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
-  const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+  const jsonPath = path.join(__dirname, ".", "db", "db-reviews.json");
+  const reviewsCadastrados = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
 
-  // Encontrar o usuário pelo ID
-  const usuario = usuariosCadastrados.find((user) => user.id === userId);
+  const id = reviewsCadastrados.length + 1;
 
-  if (!usuario) {
-    return res.status(404).send("Usuário não encontrado");
-  }
-
+  const reviewObj = new Serie(id, titulo, sinopse, nota, review);
   // Adicionar o item à lista do usuário
-  usuario.lista.push(nota, review);
+  reviewsCadastrados.push(reviewObj);
 
   // Salvar as alterações no arquivo JSON
-  fs.writeFileSync(jsonPath, JSON.stringify(usuariosCadastrados, null, 2));
-
-  res.send("Item adicionado com sucesso à lista do usuário");
+  fs.writeFileSync(jsonPath, JSON.stringify(reviewsCadastrados, null, 2));
+  res.send("Review cadastrado com sucesso");
 });
 
 
-app.post("/home", verificaToken, (req, res) => {
-
+app.get("/home", verificaToken, (req, res) => {
+  const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
+  const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
+  return res.json(usuariosCadastrados);
 });
 
+function verificaToken(req,res,next){
 
-function verificaToken(req, res, next){
-//   try{
-//     const token = req.header("Authorization").repplace("Bearer ", "");
-
-//     const decoded = jwt.verify(token, process.env.TOKEN);
-
-//     req.userId = decoded.userId;
-//     req.username = decoded.username;
-//     next();
-//   }catch(err){
-//     return res.status(401).send({error:"Token inválido"});
-//   }
+  const authHeaders = req.headers['authorization'];
   
-    const authHeader = req.headers["authorization"];
+  const token = authHeaders && authHeaders.split(' ')[1]
+  //Bearer token
 
-  const token = authHeader && authHeader.split(" ")[1];
-  //bearer token
-
-  if(token == null) return res.status(401).send("Acesso Negado");
+  if(token == null) return res.status(401).send('Acesso Negado');
 
   jwt.verify(token, process.env.TOKEN, (err) => {
-    if(err) return res.status(403).send("Token Inválido/Expirado");
-    next();
-  });
+      if(err) return res.status(403).send('Token Inválido/Expirado');
+      next();
+  })
+
 }
 
 app.get("/perfil", verificaToken, (req, res)=>{

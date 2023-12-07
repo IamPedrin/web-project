@@ -14,29 +14,24 @@ export default function Navbar(){
         }
     }
 
-    const handleError = (error) => {
-        if (error.response && error.response.status === 401) {
-           setValidado(false);
-        }
-    };
-
     useEffect(() => {
-        async function valida() {
-            try {
-                const response = await axios.get("http://localhost:3000/home", config);
-                console.log(response);
-                if(response.status === 200)
+
+        async function valida(){
+            try{
+                const resposta = await axios.get(`http://localhost:3000/home`,config);
+                console.log(resposta);
+                if(resposta.status === 200)
                     setValidado(true);
-            } catch (error) {
-                handleError(error);
+            }catch(error){
+                setValidado(false);
             }
         }
         valida();
     }, []);
 
-    // if(!validado){
-    //     return <p>Token Inválido</p>
-    // }
+    if(!validado){
+        return <p>Token Inválido</p>
+    }
 
     return(
         <>
