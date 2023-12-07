@@ -150,16 +150,13 @@ app.delete("/lista/:id", (req, res) => {
   res.send("Série excluída com sucesso");
 });
 
-// app.get("/lista/:titulo", verificaToken, (req, res) => {
-//   const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
-//   const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+app.put("/lista/:id", (req, res) => {
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
 
-//   const params = req.params;
-
-//   for(let serie of seriesCadastradas){
-//     if(params.titulo.toLowerCase()===disciplina.titulo){
-//       return res.json(serie);
-//     }
-//   }
-//   return res.status(403).send("Série nao encontrada!");
-// })
+  const id = parseInt(req.params.id);
+  const seriesFiltradas = seriesCadastradas.filter(serie => serie.id !== id);
+  const novasSeries = [{...req.body, id}, ...seriesFiltradas];
+  fs.writeFileSync(jsonPath, JSON.stringify(novasSeries, null, 2))
+  res.send("Review salva com sucesso")
+});

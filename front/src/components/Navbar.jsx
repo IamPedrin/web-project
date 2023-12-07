@@ -15,7 +15,6 @@ export default function Navbar(){
     }
 
     useEffect(() => {
-
         async function valida(){
             try{
                 const resposta = await axios.get(`http://localhost:3000/home`,config);
@@ -48,5 +47,3 @@ export default function Navbar(){
         </>
     )
 }
-
-//export default Navbar;

@@ -40,10 +40,6 @@ const CadastrarSerie = () => {
         }
     }
 
-    const limpa = () => {
-        document.getElementById("campo").value = ""
-    }
-
     return(
         <>
             <h1>Cadastre aqui sua série</h1>
@@ -64,8 +60,8 @@ const CadastrarSerie = () => {
                 <label htmlFor="review" placeholder="Review">Review</label>
                 <textarea  type="text" name="review" id="campo" {...register("review")} />
                 <p className="erro">{errors.review?.message}</p>
-                <button onClick={limpa}>Cadastrar</button>
-            </form>
+                <button>Cadastrar</button>
+           </form>
             <p className="erro">{msg}</p>
             
         </>
