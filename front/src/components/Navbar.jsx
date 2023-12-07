@@ -45,7 +45,6 @@ export default function Navbar(){
                 <ul>
                     <li><Link to="/lista">Lista</Link></li>
                     <li><Link to="/home">Cadastrar Série</Link></li>
-                    <li><Link to="/perfil">Perfil</Link></li>
                     <li><Link to="/" onClick={logout} >Sair</Link></li>
                 </ul>
             </nav>

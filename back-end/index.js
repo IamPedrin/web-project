@@ -158,5 +158,5 @@ app.put("/lista/:id", (req, res) => {
   const seriesFiltradas = seriesCadastradas.filter(serie => serie.id !== id);
   const novasSeries = [{...req.body, id}, ...seriesFiltradas];
   fs.writeFileSync(jsonPath, JSON.stringify(novasSeries, null, 2))
-  res.send("Review salva com sucesso")
+  res.send("Série editada com sucesso")
 });

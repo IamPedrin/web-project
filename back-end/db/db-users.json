@@ -12,5 +12,12 @@
     "email": "breno.hiroyuki@hotmail.com",
     "password": "$2b$10$EYH2njhYQZ2oVwfWQpsmX.Fpn8DW85BJl88rZlydVcqU7y0/wc90u",
     "lista": []
+  },
+  {
+    "id": 3,
+    "username": "antonio",
+    "email": "antonio@gmail.com",
+    "password": "$2b$10$3uAEaq7GGAACv9pUs3JJmOmdkZLGWBqnCieGYH1wlrEOhfpdht9BS",
+    "lista": []
   }
 ]
