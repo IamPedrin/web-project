@@ -13,6 +13,12 @@ O projeto em si não busca em melhorar em nada o que já existe, apenas uma vers
 - [x] CRUD com as séries
 - [ ] Modificaçoes de username e senha após cadastro 
 
+## Imagem da Tela de Login
+![image](https://github.com/IamPedrin/web-project/assets/79526423/b7d1eeb4-3ca0-4acc-9900-f0b4f364c800)
+
+
+## Imagem da Tela Inicial
+![image](https://github.com/IamPedrin/web-project/assets/79526423/886d5136-1b20-4505-9f98-6c5bdb05e7da)
 
 # Equipe:
 Pedro Luiz de Freitas Silva - FullStack Developer \
