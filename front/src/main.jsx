@@ -62,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/lista",
         element: <MinhaLista />
+      },
+      {
+        path: "/lista/:id",
+        element: <MinhaLista />
       }
     ]
   },
