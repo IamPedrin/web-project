@@ -1,90 +1,53 @@
-import { useEffect, useState } from "react";
-import Lista from "./Lista";
-import axios from 'axios';
-import { useForm } from "react-hook-form";
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
+const MinhaLista = () => {
+    const [series, setSeries] = useState([]);
 
-// export default function MinhaLista(){
-    
-//     //const [validado, setValidado] = useState(false);
-    
-
-//     const form = useForm();
-//     const {register, handleSubmit} = form;
-
-//     // const submit = (data) => {
-//     //     setFormData({...formData, ...data});
-//     // }
-    
-//     // const config = {
-//     //     headers:{
-//     //         'Authorization' : 'Bearer '.concat(sessionStorage.getItem('token'))
-//     //     }
-//     // }
-    
-//     // useEffect(() => {
-
-//     //     async function valida(){
-//     //         try{
-//     //             const resposta = await axios.get(`http://localhost:3000/lista`,config);
-//     //             console.log(resposta);
-//     //             if(resposta.status === 200)
-//     //                 setValidado(true);
-//     //         }catch(error){
-//     //             setValidado(false);
-//     //         }
-//     //     }
-//     //     valida();
-//     // }, []);
-
-//     // if(!validado){
-//     //     return <p>Token Inválido</p>
-//     // }
-
-//     return(
-//         <>
-//             <h2>Aqui você encontra uma lista gigante de séries</h2>
-//             <BuscaSerie formData={formData}/>
-//         </>
-//     )
-// }
-
-export default function MinhaLista(){
-    const [formData, setFormData] = useState({titulo : " "});
-    const [msg, setMsg] = useState("");
-    const [series, setSeries] = useState(<p>Esperando sua pesquisa!! :) </p>);
-
-    const view = [];
+    const handleDelete = async (id) => {
+        try {
+          await axios.delete(`http://localhost:3000/lista/${id}`);
+          window.location.reload();
+          window.location.reload();
+        } catch (err) {
+          console.log(err);
+        }
+    };
 
     useEffect(() => {
-        
-        const submit = async () => {
-            let endPoint = "http://localhost:3000/lista";
-            endPoint = `${endPoint}/${formData.titulo}`
-            try{
-                const dados = await axios.get(`${endPoint}`);
-                if(Array.isArray(dados.data)){
-                    for(let lista of dados.data){
-                        view.push(<Lista lista={lista}/>)
-                    }
-                }else{
-                    view.push(<Lista lista={dados.data}/>);
-                }
-                setSeries(view);
-                setMsg('');
-            }catch (error){
-                setMsg(error.response.data);
-                setSeries(<p></p>);
+        const sincronizaSeries = async () => {
+            try {
+                const res = await axios.get("http://localhost:3000/lista");
+                setSeries(res.data);
+            }catch (err){
+                console.log(err);
             }
-        }
-        submit();
-    }, [formData]);
+        };
+        sincronizaSeries();
+    }, []);
+
+    console.log(series);
 
     return(
-        <>
-            {series}
-            {msg}
-        </>
-    )
+        <div>
+            <h2>Lista de Series</h2>
+            <div className="lista">
+                {series.map((serie) => (
+                    <div className="serie">
+                        <figure>
+                            <img src={`${serie.imagem}`} alt="img-db" />
+                        </figure>
+                        <button onClick={() => handleDelete(serie.id)}>Deletar</button>
+                        <button>Editar</button>
+                        <button>Sobre</button>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
-}
+export default MinhaLista;

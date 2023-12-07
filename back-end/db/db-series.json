@@ -1,34 +1,18 @@
 [
-  {
-    "id": 1,
-    "titulo": "Mr. Robot",
-    "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
-    "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
-    "review": "Melhor Série",
-    "nota": 5
-  },
-  {
-    "id": 2,
-    "titulo": "Breaking Bad",
-    "sinopse": "Walter White (Bryan Cranston) é um professor de química na casa dos 50 anos que trabalha em uma escola secundária no Novo México. Para atender às necessidades de Skyler (Anna Gunn), sua esposa grávida, e Walt Junior (RJ Mitte), seu filho deficiente físico, ele tem que trabalhar duplamente. Sua vida fica ainda mais complicada quando descobre que está sofrendo de um câncer de pulmão incurável. Para aumentar rapidamente a quantidade de dinheiro que deixaria para sua família após sua morte, Walter usa seu conhecimento de química para fazer e vender metanfetamina, uma droga sintética. Ele conta com a ajuda do ex-aluno e pequeno traficante Jesse (Aaron Paul) e enfrenta vários desafios, incluindo o fato de seu concunhado ser um importante nome dentro da Agência Anti-Drogas da região.",
-    "imagem": "https://alineflores.com.br/wp-content/uploads/2017/11/breaking-bad.jpg",
-    "review": "Segunda melhor série.",
-    "nota": 5
-  },
-  {
-    "id": 3,
-    "titulo": "Grimm",
-    "sinopse": "Nick Burkhardt (David Giuntoli) é um detetive de homicídios que recebe novas responsabilidades após descobrir que é descendente de Grimm, uma sociedade secreta. O seu principal objetivo é conseguir encontrar um ponto de equilíbrio entre a vida real e a mitologia. A nova rotina traz desafios e perigos, sobretudo à noiva de Nick, Juliette Silverton (Bitsie Tulloch), e ao colega de trabalho, Hank Griffin (Russell Hornsby).",
-    "imagem": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/84/38/87/19843353.jpg",
-    "review": "Série boa demais e pouco conhecida, recomendadissimo!!! *_*",
-    "nota": 5
-  },
-  {
-    "id": 4,
-    "titulo": "Hannibal",
-    "sinopse": "Will Graham é um investigador do FBI que tem o talento de se inserir nas cenas dos crimes e visualizar exatamente o que aconteceu. Tal capacidade ajuda a solucionar muitos casos, mas também exige muito dele, obrigando-o a consultar o psiquiatra Hannibal Lecter. Mal sabe Graham, que o dr. Lecter não é um psiquiatra comum.",
-    "imagem": "https://br.web.img3.acsta.net/c_310_420/pictures/18/09/18/01/28/2276088.jpg",
-    "review": "Tinha tudo pra ser uma das melhores series de todos os tempos, na terceira temporada desandou e foi cancelada :(. Mas eu amo Hannibal",
-    "nota": 5
-  }
+    {
+        "id": 1,
+        "titulo": "Mr. Robot",
+        "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
+        "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
+        "review": "Melhor Série",
+        "nota": 5
+      },
+      {
+        "id": 2,
+        "titulo": "Breaking Bad",
+        "sinopse": "Walter White, um professor frustado de química, se vê em uma enrrascada quando seu casamento está em jogo, além de descobrir que está com câncer de pulmão, e que a qualquer momento poderá morrer. Assim, Walter se econtra produzindo metanfetamina.",
+        "imagem": "https://static.wikia.nocookie.net/assista-series/images/5/56/Breaking-Bad.jpg/revision/latest?cb=20150528205254&path-prefix=pt-br",
+        "review": "Bom demais",
+        "nota": 5
+      }
 ]
