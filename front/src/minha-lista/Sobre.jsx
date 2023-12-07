@@ -5,6 +5,9 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import "../styles/Sobre.css"
+
+
 const Sobre = () => {   
 
      const [serie, setSerie] = useState({})
@@ -26,14 +29,17 @@ const Sobre = () => {
     return (
         <div>
             <h2>Sobre a Série</h2>
-            <div className="serie">
+            <div className="serieAbout">
                 <figure>
                     <img src={serie.imagem} alt="img-db" />
                 </figure>
-                <h2>{serie.titulo}</h2>
-                <p>{serie.sinopse}</p>
-                <p>Nota: {serie.nota}</p>
-                <p>Review: {serie.review}</p>
+                <div className="">
+                    <h2>{serie.titulo}</h2>
+                    <p>{serie.sinopse}</p>
+                    <p>Nota: {serie.nota}</p>
+                    <p>Review: {serie.review}</p>
+                </div>
+                
             </div>
             <Link to="/lista">Voltar para a lista</Link>
         </div>

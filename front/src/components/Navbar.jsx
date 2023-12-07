@@ -43,13 +43,12 @@ export default function Navbar(){
             <nav className="nav">
                 <h2>Boxletter</h2>
                 <ul>
-                    // <li><Link to="/home" className="navbarButtons">Cadastrar</Link></li>
-                    // <li><Link to="/lista" className="navbarButtons">Minha Lista</Link></li>
-                    // <li><Link to="/perfil" className="navbarButtons">Perfil</Link></li>
-                    // <li><Link to="/" className="navbarButtons">Sair</Link></li>
-                    <li><Link to="/lista">Lista</Link></li>
-                    <li><Link to="/home">Cadastrar Série</Link></li>
-                    <li><Link to="/" onClick={logout} >Sair</Link></li>
+                    <li><Link to="/home" className="navbarButtons">Cadastrar</Link></li>
+                    <li><Link to="/lista" className="navbarButtons">Minha Lista</Link></li>
+                    <li><Link to="/perfil" className="navbarButtons">Perfil</Link></li>
+                    <li><Link to="/" onClick={logout} className="navbarButtons">Sair</Link></li>
+                    {/* <li><Link to="/lista">Lista</Link></li> */}
+                    {/* <li><Link to="/home">Cadastrar Série</Link></li> */}
                 </ul>
             </nav>
             <Outlet/>
