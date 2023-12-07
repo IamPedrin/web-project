@@ -12,7 +12,7 @@ import Navbar from './components/Navbar.jsx';
 import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
 import ChangeP from "./change/ChangeP.jsx";
-import ShowSearch from './components/ShowSearch.jsx'
+import Sobre from "./minha-lista/Sobre.jsx"
 import CadastrarSerie from './components/CadastrarSerie.jsx'
 
 //Adicionando Rotas
@@ -66,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/lista/:id",
         element: <MinhaLista />
+      },
+      {
+        path: "/lista/sobre/:id",
+        element: <Sobre />
       }
     ]
   },
