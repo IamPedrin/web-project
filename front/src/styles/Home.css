@@ -1,0 +1,21 @@
+input{
+    display: block;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.43;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    margin-bottom: 1.5%;
+}
+
+label{
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+button{
+    display: flex;
+    margin-bottom: 1rem;
+}
+

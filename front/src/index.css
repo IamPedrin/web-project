@@ -46,6 +46,13 @@ h1 {
   line-height: 1.1;
 }
 
+h2{
+  display: flex;
+  margin: 0 0 0 2%;
+
+  
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -85,7 +92,13 @@ button:focus-visible {
   height: 200px;
 }
 
-.login-user{
+/* .login-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.centerBox{
   display: flex;
   flex-direction: column;
   align-items: center;

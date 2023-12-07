@@ -48,17 +48,22 @@ const ShowSearch = () => {
 
   return (
     <div>
-      <h1>Pesquisa de Séries</h1>
-      <input type="text" placeholder="Procurar séries" value={query} onChange={(e) => setQuery(e.target.value)} />
-      <button onClick={searchShows}>Pesquisa</button>
-      {results.map((result) => (
-        <div key={result.show.id}>
-          <button className='buttonSerie' onClick={() => showDetails(result.show)}>
-            {result.show.image && <img src={result.show.image.medium} alt={result.show.name} />}
-            <p>{result.show.name}</p>
-          </button>
-        </div>
+      <div className='searchBar'>
+        <h2>Pesquisa de Séries</h2>
+        <input type="text" placeholder="Procurar séries" value={query} onChange={(e) => setQuery(e.target.value)} />
+        <button onClick={searchShows}>Pesquisa</button>
+      </div>
+
+      <div className='seriesExhibit'>
+        {results.map((result) => (
+          <div key={result.show.id}>
+            <button className='buttonSerie' onClick={() => showDetails(result.show)}>
+              {result.show.image && <img src={result.show.image.medium} alt={result.show.name} />}
+              <p>{result.show.name}</p>
+            </button>
+          </div>
       ))}
+      </div>
       {selectedShow && <ShowDetails show={selectedShow} onClose={closeDetails} />}
     </div>
   );

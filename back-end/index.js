@@ -32,8 +32,11 @@ app.post("/login", async (req, res) => {
       if(user.username === username){
         const passwordValidado = await bcrypt.compare(password, user.password);
         if(passwordValidado){
-          const token = jwt.sign({ id: user.id, username: user.username }, process.env.TOKEN);
+          // const token = jwt.sign({ id: user.id, username: user.username }, process.env.TOKEN);
+          const token = jwt.sign(user, process.env.TOKEN);
+
           return res.status(200).json({"token" : token});
+
         }else{
           return res.status(422).send("Senha inválida");
         }  

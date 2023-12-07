@@ -6,7 +6,7 @@ function App() {
   return (
     <>
 
-      <section className="login-user">
+      <section className="centerBox">
         <header className="titulo">
           <h1>Boxletter</h1>
         </header>
