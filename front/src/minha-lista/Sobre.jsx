@@ -31,7 +31,7 @@ const Sobre = () => {
 
     return (
         <div>
-            <h1>Sobre a Série</h1>
+            <h2>Sobre a Série</h2>
             <div className="serie">
                 <figure>
                     <img src={serie.imagem} alt="img-db" />

@@ -60,7 +60,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #313030;
+  /* background-color: #313030; */
+  background-color: #404040;
   cursor: pointer;
   transition: border-color 0.25s;
 }
