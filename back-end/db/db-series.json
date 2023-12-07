@@ -6,5 +6,21 @@
     "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
     "review": "Melhor Série",
     "nota": 5
+  },
+  {
+    "id": 2,
+    "titulo": "Breaking Bad",
+    "sinopse": "Cara faz droga e dá muito ruim",
+    "imagem": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fassista-series.fandom.com%2Fpt-br%2Fwiki%2FBreaking_Bad&psig=AOvVaw2z8Olf-RExKdjy83VmZ9tk&ust=1702010936571000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKDqkf3C_IIDFQAAAAAdAAAAABAD",
+    "review": "É bem dramático",
+    "nota": 5
+  },
+  {
+    "id": 3,
+    "titulo": "TWD",
+    "sinopse": "Zumbis",
+    "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/78/35/82/20303823.jpg",
+    "review": "Bem ruim lá pro final ",
+    "nota": 1
   }
 ]

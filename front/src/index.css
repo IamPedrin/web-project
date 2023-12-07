@@ -60,7 +60,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #313030;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -114,8 +114,8 @@ form{
 } 
 
 .borderBox{
-  border: 5px #191919 solid;
-  background-color: #242424;
+  /* border: 5px #191919 solid; */
+  background-color: #1b1b1b;
   border-radius: 10px;
 
   display: flex;
