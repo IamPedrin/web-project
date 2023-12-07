@@ -42,7 +42,11 @@ const MinhaLista = () => {
                         </figure>
                         <button onClick={() => handleDelete(serie.id)}>Deletar</button>
                         <button>Editar</button>
-                        <button>Sobre</button>
+                        <button>
+                            <Link to={`/lista/sobre/${serie.id}`}>
+                                Sobre
+                            </Link>
+                        </button>
                     </div>
                 ))}
             </div>

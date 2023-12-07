@@ -130,6 +130,14 @@ app.get("/lista", (req, res) => {
   return res.json(seriesCadastradas)
 })
 
+app.get("/lista/:id", (req, res) => {
+  const serieId = req.params.id;
+  const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
+  const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
+  const serieFiltrada = seriesCadastradas.find(serie => serie.id === parseInt(serieId));
+  return res.json(serieFiltrada);
+})
+
 app.delete("/lista/:id", (req, res) => {
   const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
   const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
