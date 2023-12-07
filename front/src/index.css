@@ -46,6 +46,13 @@ h1 {
   line-height: 1.1;
 }
 
+h2{
+  display: flex;
+  margin: 0 0 0 2%;
+
+  
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,7 +60,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: #313030; */
+  background-color: #404040;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -85,7 +93,13 @@ button:focus-visible {
   height: 200px;
 }
 
-.login-user{
+/* .login-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.centerBox{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,8 +115,8 @@ form{
 } 
 
 .borderBox{
-  border: 5px #191919 solid;
-  background-color: #242424;
+  /* border: 5px #191919 solid; */
+  background-color: #1b1b1b;
   border-radius: 10px;
 
   display: flex;

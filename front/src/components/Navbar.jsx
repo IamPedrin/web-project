@@ -10,47 +10,39 @@ export default function Navbar(){
 
     const config = {
         headers: {
-            "Authorization": "Bearer ".concat(sessionStorage.getItem('token'))
+            "Authorization": "Bearer ".concat(localStorage.getItem('token'))
         }
     }
 
-    const handleError = (error) => {
-        if (error.response && error.response.status === 401) {
-           setValidado(false);
-        }
-    };
-
     useEffect(() => {
-        async function valida() {
-            try {
-                const response = await axios.get("http://localhost:3000/home", config);
-                console.log(response);
-                if(response.status === 200)
+        async function valida(){
+            try{
+                const resposta = await axios.get(`http://localhost:3000/home`,config);
+                console.log(resposta);
+                if(resposta.status === 200)
                     setValidado(true);
-            } catch (error) {
-                handleError(error);
+            }catch(error){
+                setValidado(false);
             }
         }
         valida();
     }, []);
 
-    // if(!validado){
-    //     return <p>Token Inválido</p>
-    // }
+    if(!validado){
+        return <p>Token Inválido</p>
+    }
 
     return(
         <>
             <nav className="nav">
                 <h2>Boxletter</h2>
                 <ul>
-                    <li><Link to="/home">Pesquisar</Link></li>
-                    <li><Link to="/lista">Minha Lista</Link></li>
-                    <li><Link to="/perfil">Perfil</Link></li>
+                    <li><Link to="/home" className="navbarButtons">Cadastrar</Link></li>
+                    <li><Link to="/lista" className="navbarButtons">Minha Lista</Link></li>
+                    <li><Link to="/" className="navbarButtons">Sair</Link></li>
                 </ul>
             </nav>
             <Outlet/>
         </>
     )
 }
-
-//export default Navbar;

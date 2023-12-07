@@ -25,13 +25,14 @@ export default function Login(){
 
     const { errors } = formState;
 
+
     const submit = async (data) => {
         
         try
         {
             const response = await axios.post("http://localhost:3000/login", data);
             const token = response.data.token;
-            sessionStorage.setItem("token", token);
+            localStorage.setItem("token", token);
             if(token)
                 setMsg("Autenticado");
         }
@@ -43,7 +44,7 @@ export default function Login(){
     }
 
     if(msg.toLowerCase().includes("autenticado")){
-        return <Navigate to="/home" />
+        return <Navigate to="/lista" />
     }
 
     return(
@@ -61,9 +62,7 @@ export default function Login(){
                         <p className="erro">{errors.password?.message}</p>
 
                         <button>LOGIN</button>
-
                     </form>
-
             </div>
             
                     <p className="server-response">{msg}</p>

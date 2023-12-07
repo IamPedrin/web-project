@@ -11,8 +11,9 @@ import CreateUser from "./login/CreateUser.jsx";
 import Navbar from './components/Navbar.jsx';
 import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
-import ChangeP from "./change/ChangeP.jsx";
-import ShowSearch from './components/ShowSearch.jsx'
+import Sobre from "./minha-lista/Sobre.jsx"
+import CadastrarSerie from './components/CadastrarSerie.jsx'
+import Editar from './minha-lista/Editar.jsx'
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/home",
-        element: <ShowSearch />
+        element: <CadastrarSerie />
       }
     ]
   },
@@ -61,22 +62,22 @@ const router = createBrowserRouter([
       {
         path: "/lista",
         element: <MinhaLista />
+      },
+      {
+        path: "/lista/:id",
+        element: <MinhaLista />
+      },
+      {
+        path: "/lista/sobre/:id",
+        element: <Sobre />
+      },
+      {
+        path: "/lista/editar/:id",
+        element: <Editar />
       }
     ]
   },
-  {
-    path: '/mudar-senha',
-    element:<Navbar/>,
-    children:[
-      {
-        path: '/mudar-senha',
-        element:<ChangeP />
-      }
-    ]
-    
-  }
 ]);
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

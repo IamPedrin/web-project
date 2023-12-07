@@ -32,36 +32,40 @@ export default function Perfil() {
 return (
   <>
     <h2>Editar perfil</h2>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Senha:
-        <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Confirmar senha:
-        <input
-          type="password"
-          value={confirmarSenha}
-          onChange={(e) => setConfirmarSenha(e.target.value)}
-        />
-      </label>
-      <br />
-      <button type="submit">Atualizar</button>
-    </form>
+    <div className="centerBox">
+      <div className="borderBox">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Email:
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Senha:
+            <input
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Confirmar senha:
+            <input
+              type="password"
+              value={confirmarSenha}
+              onChange={(e) => setConfirmarSenha(e.target.value)}
+            />
+          </label>
+          <br />
+          <button type="submit">Atualizar</button>
+        </form>
+      </div>
+    </div>
   </>
 );
 

@@ -1,3 +1,42 @@
 [
-    
+  {
+    "id": 4,
+    "titulo": "The Walking Dead",
+    "sinopse": "Em The Walking Dead, depois de ser baleado e passar meses em coma, o xerife Rick Grimes (Andrew Lincolm) acorda sozinho em um hospital deserto. Para sua surpresa, o mundo como conhecia deixou de existir depois que um perigoso vírus provoca uma infestação de zumbis na cidade de Cynthiana, em Kentucky, nos Estados Unidos. Desesperado, Rick enfrenta a estranha ameaça na expectativa de reencontrar a mulher Lori (Sarah Wayne Callies) e o filho Cal (Chandler Riggs). Ele decide unir-se aos homens e mulheres sobreviventes para que tenham mais força para combater o fenômeno que os atinge. O grupo percorre diferentes lugares em busca de soluções para o problema. Aos poucos, eles percebem que a infestação de mortos é maior do que pensavam, se espalhando por todo o país, e possivelmente o resto do mundo. A sociedade que conheciam já não existe mais e tudo que resta é o desejo de sobreviver. Em meio ao caos da nova ordem mundial, Rick e seus companheiros percebem que os humanos sobreviventes podem ser uma ameaça maior que os próprios zumbis.",
+    "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/78/35/82/20303823.jpg",
+    "nota": "4",
+    "review": "Melhor serie"
+  },
+  {
+    "id": 2,
+    "titulo": "Breaking Bad",
+    "sinopse": "Walter White faz droga e se dá mal",
+    "imagem": "https://img.elo7.com.br/product/zoom/1DFAEEB/poster-cartaz-breaking-bad-serie-netflix-sucesso.jpg",
+    "review": "Muito bom ",
+    "nota": 5
+  },
+  {
+    "id": 2,
+    "titulo": "Mr. Robot",
+    "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
+    "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
+    "review": "O melhor q a gnt tem",
+    "nota": 5
+  },
+  {
+    "id": 3,
+    "titulo": "Under the Dome",
+    "sinopse": "Baseado na obra de Stephen King, Under The Dome acompanha um misterioso e perigoso campo de força que bloqueia Chester's Mill, uma pequena cidade dos Estados Unidos, deixando todos os moradores presos no local. Quando o estranho muro invisível surge, ele mata tudo que se encontra em seu caminho, causando imediatamente uma destruição. Enquanto tentam desvendar o mistério por trás desse evento, a população descobre cada vez mais infomações sobre as vidas pessoais dos seus vizinhos e vários segredos obscuros vem à tona. Algumas pessoas tentam tomar proveito do caos e logo um grupo de resistência, liderado por Dale \"Barbie\" Barbara (Mike Vogel), um veterano da Guerra do Iraque, irá fazer de tudo para mudar essa situação e garantir a manutenção da paz. A população de Chester's Mill se esforça para encontrar uma saída para fora da redoma, mas suas tentativas são em vão. Quanto mais tempo se passa, mais as tensões crescem, se instaurando um verdadeiro caos na, então, pacífica, cidade.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/0e/Underthedomeposter.jpg",
+    "review": "Tinha tudo para ser uma série mt boa, porém como foi cancelado arruinaram a ultima temporada",
+    "nota": 4
+  },
+  {
+    "id": 6,
+    "titulo": "The Bear",
+    "sinopse": "Carmy luta para transformar a lanchonete da família e a si mesmo enquanto trabalha ao lado de uma equipe rude e difícil que acaba se revelando como sua família escolhida.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/7/74/The_Bear_2022_FX.png",
+    "review": "Gritaria e dramaralho muito bom!!! Recomendo",
+    "nota": 5
+  }
 ]

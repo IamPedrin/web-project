@@ -11,16 +11,13 @@
   }
   
   .modal {
-    background: rgba(255, 255, 255,0.4);
+    background: rgb(255, 255, 255)212;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 400px; /* Reduzindo a largura máxima */
     width: 100%;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
   }
   
   .buttonSerie {
@@ -34,15 +31,4 @@
   }
   
   /* Adicione estilos adicionais conforme necessário */
-
-  .seriesExhibit{
-    display: flex;
-    flex-wrap: wrap;
-  }
   
-  .searchBar{
-    display: flex;
-    flex-direction: row; /* ou a direção desejada */
-    justify-content: space-between;
-    align-items: flex-start;
-  }
