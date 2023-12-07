@@ -1,0 +1,34 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: rgb(255, 255, 255)212;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px; /* Reduzindo a largura máxima */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .buttonSerie {
+    margin: 10px;
+    position: relative;
+  }
+  
+  .buttonSerie img {
+    max-width: 100px; /* Ajustando o tamanho máximo da imagem */
+    border-radius: 5px; /* Adicionando borda arredondada à imagem */
+  }
+  
+  /* Adicione estilos adicionais conforme necessário */
+  
