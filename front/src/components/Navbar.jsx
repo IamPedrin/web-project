@@ -37,10 +37,10 @@ export default function Navbar(){
             <nav className="nav">
                 <h2>Boxletter</h2>
                 <ul>
-                    <li><Link to="/home">Cadastrar</Link></li>
-                    <li><Link to="/lista">Minha Lista</Link></li>
-                    <li><Link to="/perfil">Perfil</Link></li>
-                    <li><Link to="/" >Sair</Link></li>
+                    <li><Link to="/home" className="navbarButtons">Cadastrar</Link></li>
+                    <li><Link to="/lista" className="navbarButtons">Minha Lista</Link></li>
+                    <li><Link to="/perfil" className="navbarButtons">Perfil</Link></li>
+                    <li><Link to="/" className="navbarButtons">Sair</Link></li>
                 </ul>
             </nav>
             <Outlet/>

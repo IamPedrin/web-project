@@ -48,14 +48,14 @@ const MinhaLista = () => {
                         <figure>
                             <img src={`${serie.imagem}`} alt="img-db" />
                         </figure>
-                        <button onClick={() => handleDelete(serie.id)}>Deletar</button>
-                        <button>
-                            <Link to={`/lista/editar/${serie.id}`}>
+                        <button onClick={() => handleDelete(serie.id)} className="listaButtons">Deletar</button>
+                        <button className="listaButtons">
+                            <Link to={`/lista/editar/${serie.id}`} className="listaButtons">
                             Editar
                             </Link>
                         </button>
-                        <button>
-                            <Link to={`/lista/sobre/${serie.id}`}>
+                        <button className="listaButtons">
+                            <Link to={`/lista/sobre/${serie.id}`} className="listaButtons">
                                 Sobre
                             </Link>
                         </button>

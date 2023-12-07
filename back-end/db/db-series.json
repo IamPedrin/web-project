@@ -1,10 +1,18 @@
 [
   {
+    "id": 1,
+    "titulo": "Mr. Robot",
+    "sinopse": "Hacker",
+    "imagem": "https://www.closeup-shop.com/media/oart_0/oart_m/oart_72346/1099507_G869920.JPG",
+    "review": "Hacker",
+    "nota": 5
+  },
+  {
     "id": 2,
     "titulo": "Breaking Bad",
-    "sinopse": "Walter White, um professor frustado de química, se vê em uma enrrascada quando seu casamento está em jogo, além de descobrir que está com câncer de pulmão, e que a qualquer momento poderá morrer. Assim, Walter se econtra produzindo metanfetamina.",
+    "sinopse": "Walter White faz droga e se dá mal",
     "imagem": "https://img.elo7.com.br/product/zoom/1DFAEEB/poster-cartaz-breaking-bad-serie-netflix-sucesso.jpg",
-    "review": "Bom demais",
+    "review": "Muito bom ",
     "nota": 5
   }
 ]
