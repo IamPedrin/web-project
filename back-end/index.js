@@ -134,15 +134,11 @@ app.delete("/lista/:id", (req, res) => {
   const jsonPath = path.join(__dirname, ".", "db", "db-series.json");
   const seriesCadastradas = JSON.parse(fs.readFileSync(jsonPath, { encoding: "utf-8", flag: "r" }));
 
-  const params = req.params.id;
+  const id = parseInt(req.params.id);
 
-  // Filtrar os elementos que não correspondem ao ID fornecido
-  const seriesFiltradas = seriesCadastradas.filter((serie) => serie.id === params);
+  const seriesFiltradas = seriesCadastradas.filter(serie => serie.id !== id);
 
-  //Deletar do JSON
-  seriesCadastradas.delete(seriesFiltradas);
-  //Salva a alteração
-  fs.writeFileSync(jsonPath, JSON.stringify(seriesCadastradas, null, 2));
+  fs.writeFileSync(jsonPath, JSON.stringify(seriesFiltradas, null, 2));
 
   res.send("Série excluída com sucesso");
 });

@@ -1,18 +1,18 @@
 [
-  {
-    "id": 1,
-    "titulo": "Mr. Robot",
-    "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
-    "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
-    "review": "Melhor Série",
-    "nota": 5
-  },
-  {
-    "id": 2,
-    "titulo": "Breaking Bad",
-    "sinopse": "Walter White, um professor frustado de química, se vê em uma enrrascada quando seu casamento está em jogo, além de descobrir que está com câncer de pulmão, e que a qualquer momento poderá morrer. Assim, Walter se econtra produzindo metanfetamina.",
-    "imagem": "https://static.wikia.nocookie.net/assista-series/images/5/56/Breaking-Bad.jpg/revision/latest?cb=20150528205254&path-prefix=pt-br",
-    "review": "Bom demais",
-    "nota": 5
-  }
+    {
+        "id": 1,
+        "titulo": "Mr. Robot",
+        "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
+        "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
+        "review": "Melhor Série",
+        "nota": 5
+      },
+      {
+        "id": 2,
+        "titulo": "Breaking Bad",
+        "sinopse": "Walter White, um professor frustado de química, se vê em uma enrrascada quando seu casamento está em jogo, além de descobrir que está com câncer de pulmão, e que a qualquer momento poderá morrer. Assim, Walter se econtra produzindo metanfetamina.",
+        "imagem": "https://static.wikia.nocookie.net/assista-series/images/5/56/Breaking-Bad.jpg/revision/latest?cb=20150528205254&path-prefix=pt-br",
+        "review": "Bom demais",
+        "nota": 5
+      }
 ]

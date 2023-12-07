@@ -29,9 +29,9 @@ export default function Navbar(){
         valida();
     }, []);
 
-    if(!validado){
-        return <p>Token Inválido</p>
-    }
+    // if(!validado){
+    //     return <p>Token Inválido</p>
+    // }
 
     return(
         <>
