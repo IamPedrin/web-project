@@ -44,7 +44,7 @@ export default function Login(){
     }
 
     if(msg.toLowerCase().includes("autenticado")){
-        return <Navigate to="/home" />
+        return <Navigate to="/lista" />
     }
 
     return(
@@ -62,9 +62,7 @@ export default function Login(){
                         <p className="erro">{errors.password?.message}</p>
 
                         <button>LOGIN</button>
-
                     </form>
-
             </div>
             
                     <p className="server-response">{msg}</p>

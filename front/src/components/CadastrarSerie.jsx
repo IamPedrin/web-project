@@ -65,7 +65,8 @@ const CadastrarSerie = () => {
                 <button>Cadastrar</button>
            </form>
             <p className="erro">{msg}</p>
-            
+            <Link to="/lista"
+            style={{visibility: serieCriado ? "visible" : "hidden"}}>Ir para a LISTA</Link>
         </>
     )
 

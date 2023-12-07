@@ -1,11 +1,11 @@
 [
   {
-    "id": 1,
-    "titulo": "Mr. Robot",
-    "sinopse": "Hacker",
-    "imagem": "https://www.closeup-shop.com/media/oart_0/oart_m/oart_72346/1099507_G869920.JPG",
-    "review": "Hacker",
-    "nota": 5
+    "id": 5,
+    "titulo": "Glee",
+    "sinopse": "O professor de espanhol Will Schuester (Matthew Morrison) resolve comandar o coral da escola, Glee Club. Tentando dar nova vida ao grupo, ele procura diferentes alunos, populares e nerds, como Rachel Berry (Lea Michele), Kurt Hummel (Chris Colfer), Finn Hudson (Cory Monteith), Quinn Fabray (Dianna Agron) e Brittany Pierce (Heather Morris). Schuester tenta equilibrar a sua vida pessoal, enquanto ensaia com os seus novos alunos, mas logo começa a enfrentar as armadilhas da treinadora Sue Sylvester (Jane Lynch).",
+    "imagem": "https://cdn.record.com.br/wp-content/uploads/2019/07/25173455/Sem-T%C3%ADtulo-5-600x910.jpg",
+    "nota": "2",
+    "review": "Troquei para 2 pq 1 é maldade"
   },
   {
     "id": 2,
@@ -14,5 +14,29 @@
     "imagem": "https://img.elo7.com.br/product/zoom/1DFAEEB/poster-cartaz-breaking-bad-serie-netflix-sucesso.jpg",
     "review": "Muito bom ",
     "nota": 5
+  },
+  {
+    "id": 2,
+    "titulo": "Mr. Robot",
+    "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
+    "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
+    "review": "O melhor q a gnt tem",
+    "nota": 5
+  },
+  {
+    "id": 3,
+    "titulo": "Under the Dome",
+    "sinopse": "Baseado na obra de Stephen King, Under The Dome acompanha um misterioso e perigoso campo de força que bloqueia Chester's Mill, uma pequena cidade dos Estados Unidos, deixando todos os moradores presos no local. Quando o estranho muro invisível surge, ele mata tudo que se encontra em seu caminho, causando imediatamente uma destruição. Enquanto tentam desvendar o mistério por trás desse evento, a população descobre cada vez mais infomações sobre as vidas pessoais dos seus vizinhos e vários segredos obscuros vem à tona. Algumas pessoas tentam tomar proveito do caos e logo um grupo de resistência, liderado por Dale \"Barbie\" Barbara (Mike Vogel), um veterano da Guerra do Iraque, irá fazer de tudo para mudar essa situação e garantir a manutenção da paz. A população de Chester's Mill se esforça para encontrar uma saída para fora da redoma, mas suas tentativas são em vão. Quanto mais tempo se passa, mais as tensões crescem, se instaurando um verdadeiro caos na, então, pacífica, cidade.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/0e/Underthedomeposter.jpg",
+    "review": "Tinha tudo para ser uma série mt boa, porém como foi cancelado arruinaram a ultima temporada",
+    "nota": 4
+  },
+  {
+    "id": 4,
+    "titulo": "Grimm",
+    "sinopse": "Nick Burkhardt (David Giuntoli) é um detetive de homicídios que recebe novas responsabilidades após descobrir que é descendente de Grimm, uma sociedade secreta. O seu principal objetivo é conseguir encontrar um ponto de equilíbrio entre a vida real e a mitologia. A nova rotina traz desafios e perigos, sobretudo à noiva de Nick, Juliette Silverton (Bitsie Tulloch), e ao colega de trabalho, Hank Griffin (Russell Hornsby).",
+    "imagem": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/84/38/87/19843353.jpg",
+    "review": "Serie foda, baseado nos contos grimm, a serie consegue contar historias mt boas das lendas e historias criadas por ele",
+    "nota": 4
   }
 ]
