@@ -32,12 +32,6 @@ export default function Navbar(){
         return <p>Token Inválido</p>
     }
 
-    async function logout(){
-        const response = await axios.post("http://localhost:3000/logout");
-        if(response.status === 200)
-            setValidado(false);
-    }
-
     return(
         <>
             <nav className="nav">
@@ -45,10 +39,7 @@ export default function Navbar(){
                 <ul>
                     <li><Link to="/home" className="navbarButtons">Cadastrar</Link></li>
                     <li><Link to="/lista" className="navbarButtons">Minha Lista</Link></li>
-                    <li><Link to="/perfil" className="navbarButtons">Perfil</Link></li>
-                    <li><Link to="/" onClick={logout} className="navbarButtons">Sair</Link></li>
-                    {/* <li><Link to="/lista">Lista</Link></li> */}
-                    {/* <li><Link to="/home">Cadastrar Série</Link></li> */}
+                    <li><Link to="/" className="navbarButtons">Sair</Link></li>
                 </ul>
             </nav>
             <Outlet/>

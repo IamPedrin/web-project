@@ -18,14 +18,7 @@ const MinhaLista = () => {
         }
     };
 
-    const [validado, setValidado] = useState(false);
-
-    const config = {
-        headers: {
-            "Authorization": "Bearer ".concat(sessionStorage.getItem('token'))
-        }
-    }
-
+    
     useEffect(() => {
         const sincronizaSeries = async () => {
             try {

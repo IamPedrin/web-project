@@ -21,10 +21,7 @@ const Editar = () => {
         review: ""
     });
 
-    const location = useLocation();
     const navigate = useNavigate();
-
-    //const id = location.pathname.split("/")[3];
 
     const hanldeEditar = (e) => {
         setSerie((prev) => ({...prev, [e.target.name]: e.target.value}));

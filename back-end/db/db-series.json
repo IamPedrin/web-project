@@ -1,11 +1,11 @@
 [
   {
-    "id": 5,
-    "titulo": "Glee",
-    "sinopse": "O professor de espanhol Will Schuester (Matthew Morrison) resolve comandar o coral da escola, Glee Club. Tentando dar nova vida ao grupo, ele procura diferentes alunos, populares e nerds, como Rachel Berry (Lea Michele), Kurt Hummel (Chris Colfer), Finn Hudson (Cory Monteith), Quinn Fabray (Dianna Agron) e Brittany Pierce (Heather Morris). Schuester tenta equilibrar a sua vida pessoal, enquanto ensaia com os seus novos alunos, mas logo começa a enfrentar as armadilhas da treinadora Sue Sylvester (Jane Lynch).",
-    "imagem": "https://cdn.record.com.br/wp-content/uploads/2019/07/25173455/Sem-T%C3%ADtulo-5-600x910.jpg",
-    "nota": "2",
-    "review": "Troquei para 2 pq 1 é maldade"
+    "id": 4,
+    "titulo": "The Walking Dead",
+    "sinopse": "Em The Walking Dead, depois de ser baleado e passar meses em coma, o xerife Rick Grimes (Andrew Lincolm) acorda sozinho em um hospital deserto. Para sua surpresa, o mundo como conhecia deixou de existir depois que um perigoso vírus provoca uma infestação de zumbis na cidade de Cynthiana, em Kentucky, nos Estados Unidos. Desesperado, Rick enfrenta a estranha ameaça na expectativa de reencontrar a mulher Lori (Sarah Wayne Callies) e o filho Cal (Chandler Riggs). Ele decide unir-se aos homens e mulheres sobreviventes para que tenham mais força para combater o fenômeno que os atinge. O grupo percorre diferentes lugares em busca de soluções para o problema. Aos poucos, eles percebem que a infestação de mortos é maior do que pensavam, se espalhando por todo o país, e possivelmente o resto do mundo. A sociedade que conheciam já não existe mais e tudo que resta é o desejo de sobreviver. Em meio ao caos da nova ordem mundial, Rick e seus companheiros percebem que os humanos sobreviventes podem ser uma ameaça maior que os próprios zumbis.",
+    "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/78/35/82/20303823.jpg",
+    "nota": "4",
+    "review": "Melhor serie"
   },
   {
     "id": 2,
@@ -32,11 +32,11 @@
     "nota": 4
   },
   {
-    "id": 4,
-    "titulo": "Grimm",
-    "sinopse": "Nick Burkhardt (David Giuntoli) é um detetive de homicídios que recebe novas responsabilidades após descobrir que é descendente de Grimm, uma sociedade secreta. O seu principal objetivo é conseguir encontrar um ponto de equilíbrio entre a vida real e a mitologia. A nova rotina traz desafios e perigos, sobretudo à noiva de Nick, Juliette Silverton (Bitsie Tulloch), e ao colega de trabalho, Hank Griffin (Russell Hornsby).",
-    "imagem": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/84/38/87/19843353.jpg",
-    "review": "Serie foda, baseado nos contos grimm, a serie consegue contar historias mt boas das lendas e historias criadas por ele",
-    "nota": 4
+    "id": 6,
+    "titulo": "The Bear",
+    "sinopse": "Carmy luta para transformar a lanchonete da família e a si mesmo enquanto trabalha ao lado de uma equipe rude e difícil que acaba se revelando como sua família escolhida.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/7/74/The_Bear_2022_FX.png",
+    "review": "Gritaria e dramaralho muito bom!!! Recomendo",
+    "nota": 5
   }
 ]
