@@ -101,7 +101,7 @@ app.post("/cadastrar-serie", async (req, res) => {
 });
 
 
-app.get("/home", (req, res) => {
+app.get("/home", verificaToken, (req, res) => {
   const jsonPath = path.join(__dirname, ".", "db", "db-users.json");
   const usuariosCadastrados = JSON.parse(fs.readFileSync(jsonPath, {encoding: "utf-8", flag: "r"}));
   return res.json(usuariosCadastrados);
