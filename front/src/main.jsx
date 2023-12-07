@@ -13,6 +13,7 @@ import Perfil from './perfil/Perfil.jsx';
 import MinhaLista from './minha-lista/MinhaLista.jsx';
 import ChangeP from "./change/ChangeP.jsx";
 import ShowSearch from './components/ShowSearch.jsx'
+import CadastrarSerie from './components/CadastrarSerie.jsx'
 
 //Adicionando Rotas
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/home",
-        element: <ShowSearch />
+        element: <CadastrarSerie />
       }
     ]
   },
