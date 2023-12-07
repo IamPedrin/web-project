@@ -1,18 +1,10 @@
 [
   {
-    "id": 1,
-    "titulo": "Mr. Robot",
-    "sinopse": "Elliot (Rami Malek) é um jovem programador que trabalha como engenheiro de segurança virtual durante o dia, e como hacker vigilante durante a noite. Elliot se vê numa encruzilhada quando o líder (Christian Slater) de um misterioso grupo de hacker o recruta para destruir a firma que ele é pago para proteger. Motivado pelas suas crenças pessoais, ele luta para resistir à chance de destruir os CEOs da multinacional que ele acredita estarem controlando - e destruindo - o mundo.",
-    "imagem": "https://cinema10.com.br/upload/series/series_854_MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SY1000_CR0,0,666,1000_AL_.jpg?default=poster",
-    "review": "Melhor Série",
-    "nota": 5
-  },
-  {
     "id": 2,
     "titulo": "Breaking Bad",
-    "sinopse": "Walter White faz droga e se dá mal ",
-    "imagem": "https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fwww.elo7.com.br%2Fposter-cartaz-breaking-bad-serie-netflix%2Fdp%2FBD4E10&psig=AOvVaw3XpE8cMNZ_1NW-TmxJnFlB&ust=1702047756811000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNi-oJPM_YIDFQAAAAAdAAAAABAD",
-    "review": "Muito bom",
+    "sinopse": "Walter White, um professor frustado de química, se vê em uma enrrascada quando seu casamento está em jogo, além de descobrir que está com câncer de pulmão, e que a qualquer momento poderá morrer. Assim, Walter se econtra produzindo metanfetamina.",
+    "imagem": "https://img.elo7.com.br/product/zoom/1DFAEEB/poster-cartaz-breaking-bad-serie-netflix-sucesso.jpg",
+    "review": "Bom demais",
     "nota": 5
   }
 ]

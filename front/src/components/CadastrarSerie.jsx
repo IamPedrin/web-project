@@ -42,60 +42,29 @@ const CadastrarSerie = () => {
         }
     }
 
-    const limpa = () => {
-        document.getElementById("campo").value = ""
-    }
-
     return(
         <>
             <h1>Cadastre aqui sua série</h1>
-             <div className="centerBox">
-                 <div className="borderBox">
-                     {/* <form onSubmit={handleSubmit(submit)} noValidate>
-                         <label htmlFor="titulo" placeholder="Título">Titulo</label>
-                         <input  type="text" name="titulo" id="titulo" {...register("titulo")} />
-                         <p className="erro">{errors.titulo?.message}</p>
-                         <label htmlFor="sinopse" placeholder="Sinopse">Sinopse</label>
-                         <input  type="text" name="sinopse" id="sinopse" {...register("sinopse")} />
-                         <p className="erro">{errors.sinopse?.message}</p>
-                         <label htmlFor="imagem" placeholder="Imagem">Imagem</label>
-                         <input  type="text" name="imagem" id="imagem" {...register("imagem")} />
-                         <p className="erro">{errors.imagem?.message}</p>
-                         <label htmlFor="nota" placeholder="Nota">Nota</label>
-                         <input  type="number" name="nota" id="nota" max={5} min={1} {...register("nota")} />
-                         <p className="erro">{errors.nota?.message}</p>
-                         <label htmlFor="review" placeholder="Review">Review</label>
-                         <textarea  type="text" name="review" id="review" {...register("review")} />
-                        <p className="erro">{errors.review?.message}</p>
-                         <button>Cadastrar</button>
-                     </form> */}
-
-
-                    <form onSubmit={handleSubmit(submit)} noValidate>
-                        
-                        <label htmlFor="titulo" placeholder="Título">Titulo</label>
-                        <input  type="text" name="titulo" id="campo" {...register("titulo")} />
-                        <p className="erro">{errors.titulo?.message}</p>
-                        <label htmlFor="sinopse" placeholder="Sinopse">Sinopse</label>
-                        <input  type="text" name="sinopse" id="campo" {...register("sinopse")} />
-                        <p className="erro">{errors.sinopse?.message}</p>
-                        <label htmlFor="imagem" placeholder="Imagem">Imagem</label>
-                        <input  type="text" name="imagem" id="campo" {...register("imagem")} />
-                        <p className="erro">{errors.imagem?.message}</p>
-                        <label htmlFor="nota" placeholder="Nota">Nota</label>
-                        <input  type="number" name="nota" id="campo" max={5} min={1} {...register("nota")} />
-                        <p className="erro">{errors.nota?.message}</p>
-                        <label htmlFor="review" placeholder="Review">Review</label>
-                        <textarea  type="text" name="review" id="campo" {...register("review")} />
-                        <p className="erro">{errors.review?.message}</p>
-                        <button onClick={limpa}>Cadastrar</button>
-                    </form>
-                    <p className="erro">{msg}</p>
-
-                 </div>
-             </div>
-            
-
+            <form onSubmit={handleSubmit(submit)} noValidate>
+    
+                <label htmlFor="titulo" placeholder="Título">Titulo</label>
+                <input  type="text" name="titulo" id="campo" {...register("titulo")} />
+                <p className="erro">{errors.titulo?.message}</p>
+                <label htmlFor="sinopse" placeholder="Sinopse">Sinopse</label>
+                <input  type="text" name="sinopse" id="campo" {...register("sinopse")} />
+                <p className="erro">{errors.sinopse?.message}</p>
+                <label htmlFor="imagem" placeholder="Imagem">Imagem</label>
+                <input  type="text" name="imagem" id="campo" {...register("imagem")} />
+                <p className="erro">{errors.imagem?.message}</p>
+                <label htmlFor="nota" placeholder="Nota">Nota</label>
+                <input  type="number" name="nota" id="campo" max={5} min={1} {...register("nota")} />
+                <p className="erro">{errors.nota?.message}</p>
+                <label htmlFor="review" placeholder="Review">Review</label>
+                <textarea  type="text" name="review" id="campo" {...register("review")} />
+                <p className="erro">{errors.review?.message}</p>
+                <button>Cadastrar</button>
+           </form>
+            <p className="erro">{msg}</p>
             
         </>
     )

@@ -7,13 +7,7 @@ import { Link } from "react-router-dom";
 
 const Sobre = () => {   
 
-    const [serie, setSerie] = useState({
-        titulo: "",
-        sinopse: "",
-        imagem: "",
-        nota: "",
-        review: ""
-    });
+     const [serie, setSerie] = useState({})
 
     const [error, setError] = useState(false);
 

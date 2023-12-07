@@ -18,6 +18,14 @@ const MinhaLista = () => {
         }
     };
 
+    const [validado, setValidado] = useState(false);
+
+    const config = {
+        headers: {
+            "Authorization": "Bearer ".concat(sessionStorage.getItem('token'))
+        }
+    }
+
     useEffect(() => {
         const sincronizaSeries = async () => {
             try {
@@ -30,7 +38,6 @@ const MinhaLista = () => {
         sincronizaSeries();
     }, []);
 
-    console.log(series);
 
     return(
         <div>
@@ -42,7 +49,11 @@ const MinhaLista = () => {
                             <img src={`${serie.imagem}`} alt="img-db" />
                         </figure>
                         <button onClick={() => handleDelete(serie.id)}>Deletar</button>
-                        <button>Editar</button>
+                        <button>
+                            <Link to={`/lista/editar/${serie.id}`}>
+                            Editar
+                            </Link>
+                        </button>
                         <button>
                             <Link to={`/lista/sobre/${serie.id}`}>
                                 Sobre
